@@ -21,15 +21,19 @@ public class LawaxiFeatureRenderer extends FeatureRenderer<AbstractClientPlayerE
 
     public void render(MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, AbstractClientPlayerEntity abstractClientPlayerEntity, float f, float g, float h, float j, float k, float l) {
 
+        if ("Lawaxi".equals(abstractClientPlayerEntity.getName()) && abstractClientPlayerEntity.hasSkinTexture() && !abstractClientPlayerEntity.isInvisible()) {
 
-        if ("Lawaxi".equals(abstractClientPlayerEntity.getName().getString()) && abstractClientPlayerEntity.hasSkinTexture() && !abstractClientPlayerEntity.isInvisible()) {
             VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(RenderLayer.getEntitySolid(abstractClientPlayerEntity.getSkinTexture()));
             int m = LivingEntityRenderer.getOverlay(abstractClientPlayerEntity, 0.0F);
 
             matrixStack.push();
-            this.getContextModel().head.setTextureOffset(26, 0).addCuboid(-3.0F, -12.0F, -5.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
-            this.getContextModel().head.setTextureOffset(30, 0).addCuboid(2.0F, -12.0F, -5.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
-            this.getContextModel().head.render(matrixStack,vertexConsumer,i,m);
+
+
+
+
+            getContextModel().getHead().setTextureOffset(26, 0).addCuboid(-3.0F, -12.0F, -5.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+            getContextModel().getHead().setTextureOffset(30, 0).addCuboid(2.0F, -12.0F, -5.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+            getContextModel().getHead().render(matrixStack,vertexConsumer,i,m);
             matrixStack.pop();
 
         }

@@ -14,8 +14,8 @@ import java.util.List;
 @Mixin(LivingEntityRenderer.class)
 public abstract class LivingEntityRendererMixin {
 
-
-    @Shadow @Final protected List<FeatureRenderer> features;
+    @Shadow @Final
+    protected List<FeatureRenderer> features;
 
     @Shadow
     protected final boolean addFeature(FeatureRenderer feature) {
