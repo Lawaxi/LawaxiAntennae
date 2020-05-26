@@ -27,13 +27,9 @@ public class LawaxiFeatureRenderer extends FeatureRenderer<AbstractClientPlayerE
             int m = LivingEntityRenderer.getOverlay(abstractClientPlayerEntity, 0.0F);
 
             matrixStack.push();
-
-
-
-
-            getContextModel().getHead().setTextureOffset(26, 0).addCuboid(-3.0F, -12.0F, -5.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
-            getContextModel().getHead().setTextureOffset(30, 0).addCuboid(2.0F, -12.0F, -5.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
-            getContextModel().getHead().render(matrixStack,vertexConsumer,i,m);
+            getContextModel().head.setTextureOffset(26, 0).addCuboid(-3.0F, -12.0F, -5.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+            getContextModel().head.setTextureOffset(30, 0).addCuboid(2.0F, -12.0F, -5.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+            getContextModel().head.render(matrixStack,vertexConsumer,i,m);
             matrixStack.pop();
 
         }
