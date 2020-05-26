@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.lawaxi.antennae.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "InetAddressMixin"
+  ],
+  "client": [
+    "LivingEntityRendererMixin",
+    "PlayerEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
